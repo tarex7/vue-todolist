@@ -52,7 +52,7 @@
                   >{{task.text}}</del
                 >
                 <p v-else>{{task.text}}</p>
-                <i class="fa-solid fa-xmark text-danger"></i>
+                <i @click="removeTask(index)" class="fa-solid fa-xmark text-danger"></i>
               </li>
             </ul>
           </div>
