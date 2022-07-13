@@ -30,6 +30,7 @@
               <div class="input-group mb-3">
                 <input
                   v-model="newTask"
+                  @keyup.enter="addTask"
                   type="text"
                   class="form-control"
                   placeholder="Write a task..."
