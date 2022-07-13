@@ -35,7 +35,11 @@
                   class="form-control"
                   placeholder="Write a task..."
                 />
-                <div @click="addTask" class="btn btn-success input-group-text" id="basic-addon2">
+                <div
+                  @click="addTask"
+                  class="btn btn-success input-group-text"
+                  id="basic-addon2"
+                >
                   Add task<i class="ms-3 fa-solid fa-plus"></i>
                 </div>
               </div>
@@ -51,9 +55,10 @@
                 <del
                   :class="{'bg-success p-1 rounded text-white' : task.done}"
                   v-if="task.done"
+                  @click="toggleDoneUndone(index)"
                   >{{task.text}}</del
                 >
-                <p v-else>{{task.text}}</p>
+                <p @click="toggleDoneUndone(index)" v-else>{{task.text}}</p>
                 <i
                   @click="removeTask(index)"
                   class="fa-solid fa-xmark text-danger"

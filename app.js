@@ -29,5 +29,8 @@ const app = new Vue({
     addTask() {
       this.tasks.push({ text: this.newTask, done: false });
     },
+    toggleDoneUndone(index) {
+      this.tasks[index].done = !this.tasks[index].done
+    },
   },
 });
