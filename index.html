@@ -29,11 +29,12 @@
             <div class="input-group mb-3 mx-auto">
               <div class="input-group mb-3">
                 <input
+                  v-model="newTask"
                   type="text"
                   class="form-control"
                   placeholder="Write a task..."
                 />
-                <div class="btn btn-success input-group-text" id="basic-addon2">
+                <div @click="addTask" class="btn btn-success input-group-text" id="basic-addon2">
                   Add task<i class="ms-3 fa-solid fa-plus"></i>
                 </div>
               </div>
@@ -52,7 +53,10 @@
                   >{{task.text}}</del
                 >
                 <p v-else>{{task.text}}</p>
-                <i @click="removeTask(index)" class="fa-solid fa-xmark text-danger"></i>
+                <i
+                  @click="removeTask(index)"
+                  class="fa-solid fa-xmark text-danger"
+                ></i>
               </li>
             </ul>
           </div>
