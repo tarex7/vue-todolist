@@ -1,0 +1,9 @@
+.fa-xmark {
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: all .3s;
+} 
+
+.fa-xmark:hover {
+    transform: scale(1.25);
+}
