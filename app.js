@@ -23,14 +23,14 @@ const app = new Vue({
     ],
   },
   methods: {
-    removeTask(index) {
-      this.tasks.splice(index, 1);
+    removeTask(i) {
+      this.tasks.splice(i, 1);
     },
     addTask() {
       this.tasks.push({ text: this.newTask, done: false });
     },
-    toggleDoneUndone(index) {
-      this.tasks[index].done = !this.tasks[index].done
+    toggleDoneUndone(i) {
+      this.tasks[i].done = !this.tasks[i].done
     },
   },
 });

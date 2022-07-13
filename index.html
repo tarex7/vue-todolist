@@ -32,7 +32,7 @@
                   v-model="newTask"
                   @keyup.enter="addTask"
                   type="text"
-                  class="form-control"
+                  class="form-control "
                   placeholder="Write a task..."
                 />
                 <div
@@ -54,11 +54,11 @@
               >
                 <del
                   :class="{'bg-success p-1 rounded text-white' : task.done}"
-                  v-if="task.done"
                   @click="toggleDoneUndone(index)"
+                  v-if="task.done"
                   >{{task.text}}</del
                 >
-                <p @click="toggleDoneUndone(index)" v-else>{{task.text}}</p>
+                <p v-else @click="toggleDoneUndone(index)" >{{task.text}}</p>
                 <i
                   @click="removeTask(index)"
                   class="fa-solid fa-xmark text-danger"
